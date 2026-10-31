@@ -152,7 +152,7 @@ export default function Pilots() {
         </div>
 
         <div className="platform-product">
-          <span>Racing</span> Platform
+          <span>Plataforma</span> de competição
         </div>
 
         <a href="/" className="timing-link">
@@ -166,7 +166,7 @@ export default function Pilots() {
         <a className="nav-item" href="/karts">Karts</a>
         <a className="nav-item" href="/transponders">Transponders</a>
         <a className="nav-item" href="/tracks">Pistas</a>
-        <a className="nav-item" href="/events">Coletores</a>
+        <a className="nav-item" href="/events">Eventos e treinos</a>
       </nav>
 
       <section className="platform-content">

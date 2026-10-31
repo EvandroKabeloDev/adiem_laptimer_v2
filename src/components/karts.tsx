@@ -294,15 +294,15 @@ export default function Karts() {
             <div className="platform-brand-subtitle">Associação de Desenvolvimento e Incentivo de Esporte a Motor</div>
           </div>
         </div>
-        <div className="platform-product"><span>Racing</span> Platform</div>
-        <Link href="/" className="timing-link" onClick={closeModals}>Live Timing <ChevronRight size={16} /></Link>
+        <div className="platform-product"><span>Plataforma</span> de competição</div>
+        <Link href="/" className="timing-link" onClick={closeModals}>Cronometragem ao vivo <ChevronRight size={16} /></Link>
       </header>
 
       <nav className="platform-nav" aria-label="Navegação principal">
         <Link className="nav-item" href="/events" onClick={closeModals}><Flag size={17} />Eventos / Treinos</Link>
         <Link className="nav-item" href="/pilots" onClick={closeModals}>Pilotos</Link>
         <Link className="nav-item active" href="/karts" onClick={closeModals}><Gauge size={17} />Karts</Link>
-        <Link className="nav-item" href="/transponders">Transponders</Link>
+        <Link className="nav-item" href="/transponders" >Transponders</Link>
         <Link className="nav-item" href="/tracks" onClick={closeModals}>Pistas</Link>
         <Link className="nav-item" href="/events" onClick={closeModals}>Coletores</Link>
       </nav>
@@ -416,8 +416,8 @@ export default function Karts() {
                 <label className="field"><span>Pressão (psi)</span><input type="number" step="0.1" value={setupForm.tire_pressure_psi} onChange={(e) => updateSetupForm("tire_pressure_psi", e.target.value)} /></label>
                 <label className="field"><span>Pinhão dianteiro</span><input type="number" step="1" value={setupForm.front_sprocket} onChange={(e) => updateSetupForm("front_sprocket", e.target.value)} /></label>
                 <label className="field"><span>Coroa traseira</span><input type="number" step="1" value={setupForm.rear_sprocket} onChange={(e) => updateSetupForm("rear_sprocket", e.target.value)} /></label>
-                <label className="field"><span>Caster</span><input type="number" step="0.1" value={setupForm.caster} onChange={(e) => updateSetupForm("caster", e.target.value)} /></label>
-                <label className="field"><span>Camber</span><input type="number" step="0.1" value={setupForm.camber} onChange={(e) => updateSetupForm("camber", e.target.value)} /></label>
+                <label className="field"><span>Cáster</span><input type="number" step="0.1" value={setupForm.caster} onChange={(e) => updateSetupForm("caster", e.target.value)} /></label>
+                <label className="field"><span>Cambagem</span><input type="number" step="0.1" value={setupForm.camber} onChange={(e) => updateSetupForm("camber", e.target.value)} /></label>
                 <label className="field"><span>Geometria</span><input value={setupForm.geometry} onChange={(e) => updateSetupForm("geometry", e.target.value)} placeholder="Ex.: alinhamento base" /></label>
                 <label className="field"><span>Pastilha de freio</span><input value={setupForm.brake_pad_status} onChange={(e) => updateSetupForm("brake_pad_status", e.target.value)} placeholder="Ex.: nova / 70%" /></label>
                 <label className="field field-full"><span>Observações</span><textarea rows={3} value={setupForm.notes} onChange={(e) => updateSetupForm("notes", e.target.value)} /></label>

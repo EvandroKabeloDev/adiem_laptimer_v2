@@ -134,7 +134,7 @@ export default function Tracks() {
         </div>
 
         <div className="platform-product">
-          <span>Racing</span> Platform
+          <span>Plataforma</span> de competição
         </div>
 
         <a href="/" className="timing-link">

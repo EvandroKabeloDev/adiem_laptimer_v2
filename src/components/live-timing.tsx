@@ -425,7 +425,7 @@ export default function LiveTiming() {
           <div className="brand-divider" />
 
           <div className="product-name">
-            <span>Racing</span> Live Timing
+            <span>ADIEM</span> Cronometragem ao vivo
           </div>
         </div>
 
@@ -602,7 +602,7 @@ export default function LiveTiming() {
           </section>
 
           <section className="panel" style={{ marginBottom: 16, padding: 16 }}>
-            <div className="panel-title" style={{ marginBottom: 6 }}>Comparativo dos karts</div>
+            <div className="panel-title" style={{ marginBottom: 6 }}>Comparação entre karts</div>
             <p style={{ color: "#8e9aa7", fontSize: 12, margin: "0 0 14px" }}>Voltas agrupadas pelo transponder cadastrado. Os tempos antigos sem transponder associado não são atribuídos automaticamente.</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 360px), 1fr))", gap: 14 }}>
               {[...new Set([...Object.keys(kartLabels), ...laps.map((lap) => String(lap.transponder_id ?? "sem-id"))])]
@@ -624,13 +624,13 @@ export default function LiveTiming() {
                         <span style={{ background: "#15291f", color: "#40df93", borderRadius: 6, padding: "5px 8px", fontSize: 12, fontWeight: 700 }}>{kartLaps.length} voltas</span>
                       </div>
                       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 8, marginBottom: 14 }}>
-                        <div style={{ background: "#171c22", borderRadius: 8, padding: 10 }}><div style={{ color: "#8e9aa7", fontSize: 11 }}>MELHOR</div><div style={{ color: "#40df93", fontSize: 19, fontWeight: 800 }}>{formatLapTime(best?.lap_time_ms)}</div></div>
+                        <div style={{ background: "#171c22", borderRadius: 8, padding: 10 }}><div style={{ color: "#8e9aa7", fontSize: 11 }}>MELHOR VOLTA</div><div style={{ color: "#40df93", fontSize: 19, fontWeight: 800 }}>{formatLapTime(best?.lap_time_ms)}</div></div>
                         <div style={{ background: "#171c22", borderRadius: 8, padding: 10 }}><div style={{ color: "#8e9aa7", fontSize: 11 }}>ÚLTIMA</div><div style={{ color: "#f4f6f8", fontSize: 19, fontWeight: 800 }}>{formatLapTime(last?.lap_time_ms)}</div></div>
                         <div style={{ background: "#171c22", borderRadius: 8, padding: 10 }}><div style={{ color: "#8e9aa7", fontSize: 11 }}>MÉDIA</div><div style={{ color: "#f4f6f8", fontSize: 19, fontWeight: 800 }}>{formatLapTime(average)}</div></div>
                       </div>
                       <div style={{ overflowX: "auto" }}>
                         <table className="lap-table" style={{ minWidth: 360, width: "100%" }}>
-                          <thead><tr><th>#</th><th>Tempo</th><th>Dif. melhor</th><th>Passagem</th></tr></thead>
+                          <thead><tr><th>#</th><th>Tempo</th><th>Diferença para a melhor</th><th>Passagem</th></tr></thead>
                           <tbody>
                             {kartLaps.length === 0 ? <tr><td colSpan={4} className="empty-state">Aguardando passagem...</td></tr> : [...kartLaps].reverse().map((lap) => {
                               const diff = best ? lap.lap_time_ms - best.lap_time_ms : 0;
