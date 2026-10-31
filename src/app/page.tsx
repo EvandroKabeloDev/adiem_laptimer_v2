@@ -60,7 +60,7 @@ const fieldLabels: Record<string,string> = {
  description:"Descrição", amount:"Valor", due_date:"Data de vencimento", paid_at:"Data do pagamento", supplier:"Fornecedor",
  rt004_lap_id:"ID da volta RT004", session_id:"Sessão", note:"Anotação", pilot_name:"Nome do piloto", kart_number:"Número do kart",
  change_type:"Tipo de alteração", effective_lap_number:"Volta efetiva", actor:"Responsável pela ação", action:"Ação",
- entity_type:"Tipo de registro", entity_id:"ID do registro", role:"Perfil de acesso", layout_id:"Traçado",
+ entity_type:"Tipo de registro", entity_id:"ID do registro", role:"Perfil de acesso",
 };
 const pretty=(s:string)=>fieldLabels[s] || s.replaceAll("_"," ").replace(/\b\w/g,c=>c.toUpperCase());
 function fmt(v:any){if(v===null||v===undefined||v==="")return "—"; if(typeof v==="object")return JSON.stringify(v); return String(v);}
